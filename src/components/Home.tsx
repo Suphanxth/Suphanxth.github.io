@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Home.css';
 
 function Home() {
@@ -8,10 +8,17 @@ function Home() {
   const targetTime = useRef<number>(0);
   const rafId = useRef<number>();
 
+  const [videoSrc, setVideoSrc] = useState<string>('');
+
+  useEffect(() => {
+    // เลือก video ตามความกว้างหน้าจอ
+    const isMobile = window.innerWidth <= 768;
+    setVideoSrc(isMobile ? '/src/assets/suphanath-mobile.mp4' : '/src/assets/suphanath.mp4');
+  }, []);
+
   useEffect(() => {
     const section = sectionRef.current;
     const video = videoRef.current;
-
     if (!section || !video) return;
 
     const onLoadedMetadata = () => {
@@ -29,14 +36,13 @@ function Home() {
 
       const animate = () => {
         if (video.readyState >= 2) {
-          // เพิ่มความ smooth ด้วย easing
           video.currentTime += (targetTime.current - video.currentTime) * 0.08;
         }
         rafId.current = requestAnimationFrame(animate);
       };
 
-      onScroll(); // run once
-      animate();  // start animation loop
+      onScroll();
+      animate();
       window.addEventListener('scroll', onScroll);
     };
 
@@ -47,22 +53,24 @@ function Home() {
       window.removeEventListener('scroll', () => {});
       cancelAnimationFrame(rafId.current!);
     };
-  }, []);
+  }, [videoSrc]); // ต้องรอ videoSrc ถูกกำหนดก่อน
 
   return (
     <div className="home">
       <div className="home__container">
         <div className="home__video" ref={sectionRef}>
           <div className="holder">
-            <video
-              ref={videoRef}
-              muted
-              playsInline
-              className="home__video__content"
-              preload="auto"
-            >
-              <source src="/src/assets/suphanath.mp4" type="video/mp4" />
-            </video>
+            {videoSrc && (
+              <video
+                ref={videoRef}
+                muted
+                playsInline
+                className="home__video__content"
+                preload="auto"
+              >
+                <source src={videoSrc} type="video/mp4" />
+              </video>
+            )}
           </div>
         </div>
         <div className="home__text">

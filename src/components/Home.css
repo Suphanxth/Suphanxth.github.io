@@ -34,7 +34,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 2rem;
     text-align: center;
   }
   
@@ -44,4 +43,38 @@
     position: relative;
     z-index: 10; /* เลเยอร์ที่สูงกว่า video */
   }
-  
+
+  /* --------------------------------------------
+   Media Queries: ปรับสำหรับ Tablet/Mobile
+   -------------------------------------------- */
+@media (max-width: 768px) {
+  .home__container {
+    padding: 0;           /* ลด padding รอบนอก */
+  }
+  .home__video {
+    min-height: 70vh;     /* ให้วิดีโอไม่ยาวเกินไป */
+  }
+  .home__text {
+    min-height: auto;     /* ให้ปรับตามเนื้อหา */
+    margin-top: 1rem;     /* เว้นช่องว่างด้านบน */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem;      /* ลด padding บน navbar */
+  }
+  .home__video {
+    min-height: 50vh;     /* ยาวครึ่งจอพอเหมาะ */
+  }
+  .home__text {
+    padding: 0.5rem;      /* ลด padding */
+    text-align: center;
+  }
+  .home__text h1 {
+    font-size: 1.5rem;    /* ลดขนาดหัวข้อ */
+  }
+  .home__text p {
+    font-size: 1rem;      /* ลดขนาดข้อความ */
+  }
+}

@@ -1,6 +1,6 @@
 function Resume(){
     return(
-        <div>ปวดหัวแล้วนะ</div>
+        <div>Resume แบบ เขียนเอาเอง</div>
     )
 }
 

@@ -1,20 +1,18 @@
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Sidebar from './components/Sidebar'
+import NavBar from './components/Navbar'
 import Myproject from "./components/Myproject";
 import Resume from './components/Resume'
+import Home from './components/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className="bg-white min-h-screen">
     <BrowserRouter>
-      <Sidebar />
+      <NavBar />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/myproject" element={<Myproject />} />
       </Routes>
@@ -39,7 +37,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
-    </>
+    </div>
   )
 }
 

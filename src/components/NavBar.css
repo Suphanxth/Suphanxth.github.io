@@ -1,0 +1,124 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fdfdfc;
+}
+
+.navbar__container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+}
+
+.navbar__me {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+}
+
+.navbar__name {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: black;
+}
+
+.navbar__aboutme {
+    display: flex;
+    gap: 1rem;
+    justify-content: center; /* ทำให้เนื้อหาภายใน aboutme อยู่ตรงกลาง */
+    align-items: center; /* จัดให้อยู่แนวกลาง */
+    flex-grow: 1;
+}
+
+.navbar__link {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.navbar__link:hover {
+    color: #007BFF;
+}
+
+.navbar__socials {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.navbar__socials a {
+    margin-right: 0.75rem;
+}
+
+.navbar__social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 25%;
+    opacity: 0.85;
+}
+
+/* สำหรับอุปกรณ์ที่มีหน้าจอขนาดเล็ก */
+@media (max-width: 768px) {
+    .navbar__container {
+        padding: 1rem; /* ลดระยะห่าง */
+        flex-direction: column; /* จัดเรียงแนวตั้ง */
+        align-items: center; /* จัดกลาง */
+    }
+
+    .navbar__me {
+        margin-bottom: 1rem; /* เพิ่มระยะห่างระหว่าง avatar และลิงก์ */
+    }
+
+    .navbar__avatar {
+        width: 50px; /* ลดขนาด avatar */
+        height: 50px;
+    }
+
+    .navbar__name {
+        font-size: 1.2rem; /* ลดขนาดตัวอักษร */
+    }
+
+    .navbar__link {
+        font-size: 1.15rem; /* ลดขนาดตัวอักษรลิงก์ */
+        margin: 0.5rem 0; /* เพิ่มระยะห่างระหว่างลิงก์ */
+    }
+
+    .navbar__socials {
+        margin-top: 1rem;
+        justify-content: center; /* จัดกลางไอคอนโซเชียล */
+    }
+
+    .navbar__social-icon {
+        width: 30px; /* ลดขนาดไอคอน */
+        height: 30px;
+    }
+}
+
+/* สำหรับหน้าจอขนาดมือถือ */
+@media (max-width: 480px) {
+    .navbar__container {
+        padding: 0.5rem; /* ลดระยะห่าง */
+    }
+
+    .navbar__link {
+        font-size: 1rem; /* ลดขนาดตัวอักษรลิงก์ */
+        margin: 0.5rem 0; /* เพิ่มระยะห่างระหว่างลิงก์ */
+    }
+
+    .navbar__socials {
+        margin-top: 1rem;
+        justify-content: center;
+        gap: 1rem; /* เพิ่มระยะห่างระหว่างไอคอน */
+    }
+}

@@ -1,0 +1,11 @@
+  .resume {
+    position: relative;
+    width: 100vw;
+  }
+
+  .resume__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }

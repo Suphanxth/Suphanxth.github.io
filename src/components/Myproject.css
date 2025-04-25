@@ -1,0 +1,5 @@
+.myproject {
+    position: relative;
+    width: 100vw; /* ความกว้างเต็มหน้าจอ */
+    height: 100vh; /* ความสูงเต็มหน้าจอ */
+  }

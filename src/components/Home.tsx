@@ -1,12 +1,29 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 function Home() {
+  const [cards] = useState([
+    {
+      title: 'Easible: Automated Network Device Configuration and Verification Web Application',
+      content: 'Thesis Project',
+      image: '/src/assets/easible.png',
+      text: "Thesis Project: lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      link: '/myproject',
+    },
+    {
+      title: 'EoX Check',
+      content: 'EoX Check',
+      image: '/src/assets/ciscodevnet.png',
+      text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      link: '/myproject',
+    }
+  ]);
+
   const sectionRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const scrollY = useRef<number>(0);
   const targetTime = useRef<number>(0);
-  const rafId = useRef<number>();
+  const rafId = useRef<number | null>(null);
 
   const [videoSrc, setVideoSrc] = useState<string>('');
 
@@ -74,11 +91,21 @@ function Home() {
           </div>
         </div>
         <div className="home__text">
-          <h1>LESGOOOOOOOOOOOOOOOO</h1>
-          <p>ยังคิดเนื้อหาที่จะเขียนม่ายยยยยยยยยยยยออก แต่น่าจะใส่ Project เป็น card</p>
-          <a href="https://www.youtube.com/watch?v=ciqW_uNtxjM" className="home__text__link">
-            <button className="home__text__link__btn">Go to Example</button>
-          </a>
+          <h1>PROJECT</h1>
+          <div className="home__cards">
+            {
+              cards.map((card, i) => (
+                <div className="home__card__item" key={i}>
+                  <img src={card.image} alt={card.title} className="home__card__item__image" />
+                  <h2 className="home__card__item__title">{card.title}</h2>
+                  <p className="home__card__item__text">{card.text}</p>
+                  <Link to={card.link} className="home__card__item__link">
+                    <button className="home__card__item__link__btn">Explore {card.content}</button>
+                  </Link>
+                </div>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>

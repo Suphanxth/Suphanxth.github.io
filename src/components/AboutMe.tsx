@@ -92,14 +92,14 @@ function AboutMe() {
                 <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                     <div>
                         <h2 style={{ fontSize: '32px', textDecoration: 'underline' }}>SOFT SKILLS</h2>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '35px', fontSize: '14px' }}>
-                            <ul style={{ padding: 0 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '35px', fontSize: '14px', marginTop: '0' }}>
+                            <ul style={{ padding: 0, margin: 0 }}>
                                 <li>Friendliness</li>
                                 <li>Adaptability</li>
                                 <li>Communication</li>
                                 <li>Teamwork</li>
                             </ul>
-                            <ul style={{ padding: 0 }}>
+                            <ul style={{ padding: 0, margin: 0 }}>
                                 <li>Respect & Support</li>
                                 <li>Empathetic listening</li>
                                 <li>Problem-solving</li>
@@ -111,6 +111,18 @@ function AboutMe() {
                         <li style={{ fontSize: '14px' }}>Back-End Developer</li>
                         <li style={{ fontSize: '14px' }}>Full Stack Developer</li>
                     </div>
+                </div>
+                <hr/>
+            </div>
+            <div className='hobby'>
+                <h2 style={{ fontSize: '32px', textDecoration: 'underline' }}>HOBBY</h2>
+                <div style={{ textAlign: 'left', fontSize: '14px' }}>
+                    <li><strong>Listening to music</strong>(Thai indie, T-Pop, J-Pop)</li>
+                    <li><strong>Gaming</strong> (FPS, Turn-based, Action RPG)</li>
+                    <li><strong>Building Gunpla</strong> (Gundam plastic models)</li>
+                    <li><strong>Reading Manga</strong></li>
+                    <li><strong>Watching anime</strong></li>
+                    <li><strong>Mastering the art of strategic sleep</strong></li>
                 </div>
                 <hr/>
             </div>

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+  
   .home {
     position: relative;
     width: 100%; /* ความกว้างเต็มหน้าจอ */
@@ -29,7 +35,7 @@
   }
 
   .home__text {
-    min-height: 100vh;         /* ให้เต็มหน้าจอ */
+    min-height: 50vh;         /* ให้เต็มหน้าจอ */
     display: flex;
     align-items: center;
     justify-content: center;

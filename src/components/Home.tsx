@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import './Home.css';
 import Card from './Card';
+import AboutMe from './AboutMe';
 
 function Home() {
 
@@ -97,6 +98,7 @@ function Home() {
         </div>
         <div className="home__text">
           <h1>ABOUT ME</h1>
+          <AboutMe />
         </div>
         <div className="home__text">
           <h1>PROJECT</h1>

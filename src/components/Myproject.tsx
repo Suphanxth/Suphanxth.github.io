@@ -1,18 +1,13 @@
 import './Myproject.css'
+import Card from './Card';
 
 function Myproject() {
+
   return (
-    <div className="myproject">
-        <div className="container">
-            <div className="box">  
-                <div className="inner">
-                    <span>My Project</span>
-                </div>
-                <div className="inner">
-                    <span>My Project</span>
-                </div>
-            </div>
-        </div>
+    <div className='myproject'>
+      <div className="home__text">
+        <Card />
+      </div>
     </div>
   );
 }

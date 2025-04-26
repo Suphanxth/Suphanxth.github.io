@@ -1,5 +1,14 @@
-.myproject {
+  .myproject {
     position: relative;
-    width: 100vw; /* ความกว้างเต็มหน้าจอ */
+    width: 100%; /* ความกว้างเต็มหน้าจอ */
     height: 100vh; /* ความสูงเต็มหน้าจอ */
+  }
+
+  .myproject__text {
+    min-height: 100vh;         /* ให้เต็มหน้าจอ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
   }

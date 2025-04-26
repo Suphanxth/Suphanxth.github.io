@@ -1,24 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Home.css';
+import Card from './Card';
 
 function Home() {
-  const [cards] = useState([
-    {
-      title: 'Easible: Automated Network Device Configuration and Verification Web Application',
-      content: 'Thesis Project',
-      image: '/src/assets/easible.png',
-      text: "Thesis Project: lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      link: '/myproject',
-    },
-    {
-      title: 'EoX Check',
-      content: 'EoX Check',
-      image: '/src/assets/ciscodevnet.png',
-      text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      link: '/myproject',
-    }
-  ]);
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -72,8 +56,29 @@ function Home() {
     };
   }, [videoSrc]); // ต้องรอ videoSrc ถูกกำหนดก่อน
 
+  useEffect(() => {
+    const downArrow = document.querySelector('.header-down-arrow');
+
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        downArrow?.classList.add('hidden'); // ซ่อนลูกศรเมื่อเลื่อนเกิน 50px
+      } else {
+        downArrow?.classList.remove('hidden'); // แสดงลูกศรเมื่ออยู่ด้านบน
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="home">
+      <div className="header-down-arrow">
+        <img src="https://cssanimation.rocks/levelup/public/images/downarrow.png" width="50" alt="Scroll Down" />
+      </div>
       <div className="home__container">
         <div className="home__video" ref={sectionRef}>
           <div className="holder">
@@ -91,21 +96,11 @@ function Home() {
           </div>
         </div>
         <div className="home__text">
+          <h1>ABOUT ME</h1>
+        </div>
+        <div className="home__text">
           <h1>PROJECT</h1>
-          <div className="home__cards">
-            {
-              cards.map((card, i) => (
-                <div className="home__card__item" key={i}>
-                  <img src={card.image} alt={card.title} className="home__card__item__image" />
-                  <h2 className="home__card__item__title">{card.title}</h2>
-                  <p className="home__card__item__text">{card.text}</p>
-                  <Link to={card.link} className="home__card__item__link">
-                    <button className="home__card__item__link__btn">Explore {card.content}</button>
-                  </Link>
-                </div>
-              ))
-            }
-          </div>
+          <Card />
         </div>
       </div>
     </div>

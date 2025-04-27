@@ -4,6 +4,8 @@ import NavBar from './components/NavBar'
 import Myproject from "./components/Myproject";
 import Resume from './components/Resume'
 import Home from './components/Home'
+import Easible from './components/Project/Easible';
+import EoXCheck from './components/Project/EoXCheck';
 
 function App() {
 
@@ -15,6 +17,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/myproject" element={<Myproject />} />
+          <Route path="/myproject/easible" element={<Easible />} />
+          <Route path="/myproject/eoxcheck" element={<EoXCheck />} />
         </Routes>
       </BrowserRouter>
     </div>

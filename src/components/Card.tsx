@@ -7,14 +7,14 @@ function Card() {
     {
       title: 'Easible: Automated Network Device Configuration and Verification Web Application',
       content: 'Thesis Project',
-      image: '/src/assets/easible.png',
+      image: '/assets/easible.png',
       text: "Thesis Project: lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       link: '/myproject/easible',
     },
     {
       title: 'EoX Check',
       content: 'EoX Check',
-      image: '/src/assets/ciscodevnet.png',
+      image: '/assets/ciscodevnet.png',
       text: "A web application for checking the EoX (End-of-Life/End-of-Support) status of Cisco products. Users can quickly look up multiple Serial Numbers (S/N) or Part Numbers at once. The app integrates with Cisco APIs to fetch real-time EoX information efficiently.",
       link: '/myproject/eoxcheck',
     }

@@ -106,8 +106,12 @@ function AboutMe() {
                     </div>
                     <div>
                         <h2 style={{ fontSize: '32px', textDecoration: 'underline' }}>INTERESTED IN</h2>
-                        <li style={{ fontSize: '14px' }}>Back-End Developer</li>
-                        <li style={{ fontSize: '14px' }}>Full Stack Developer</li>
+                        <div className='interestin'>
+                            <ul>
+                                <li>Back-End Developer</li>
+                                <li>Full Stack Developer</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <hr/>

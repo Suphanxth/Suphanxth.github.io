@@ -34,6 +34,12 @@
   margin-top: 0;
 }
 
+.interestin {
+  gap: 35px; 
+  font-size: 14px; 
+  margin-top: 0;
+}
+
 .soft-skill ul {
   padding: 0; 
   margin: 0; 
@@ -103,6 +109,21 @@ li {
     text-align: left; /* Align text to the left */
   }
 
+  .interestin {
+    display: block; /* Remove flex for SOFT SKILLS */
+    gap: 0; /* Reset gap */
+  }
+
+  .interestin ul {
+    display: block; /* Change to block for mobile */
+    margin: 0 auto; /* Center the whole list */
+    width: fit-content; /* Adjust the width to fit content */
+  }
+
+  .interestin ul li {
+    text-align: left; /* Align text to the left */
+  }
+
   .soft-interest > div {
     margin-bottom: 20px;
   }
@@ -138,6 +159,11 @@ li {
   }
 
   .soft-skill {
+    display: block; /* Remove flex for SOFT SKILLS */
+    gap: 0; /* Reset gap */
+  }
+
+  .interestin {
     display: block; /* Remove flex for SOFT SKILLS */
     gap: 0; /* Reset gap */
   }

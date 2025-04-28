@@ -116,19 +116,14 @@ function AboutMe() {
                 </div>
                 <hr/>
             </div>
-            <div className='hobby'>
+            {/* <div className='hobby'>
                 <h2 style={{ fontSize: '32px', textDecoration: 'underline' }}>HOBBY</h2>
                 <div style={{ textAlign: 'left', fontSize: '14px' }}>
-                    <li><strong>Listening to music</strong>(Thai indie, T-Pop, J-Pop)</li>
-                    <li><strong>Gaming</strong> (FPS, Turn-based, Action RPG)</li>
+                    <li><strong>Listening to music</strong></li>
                     <li><strong>Running</strong></li>
-                    <li><strong>Building Gunpla</strong> (Gundam plastic models)</li>
-                    <li><strong>Reading Manga</strong></li>
-                    <li><strong>Watching anime</strong></li>
-                    <li><strong>Mastering the art of strategic sleep</strong></li>
                 </div>
                 <hr/>
-            </div>
+            </div> */}
         </div>
       </div>
     </div>

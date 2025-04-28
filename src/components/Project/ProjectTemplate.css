@@ -16,10 +16,11 @@
 }
 
 .project__template__image {
-  max-width: 100%;
-  height: auto;
+  width: 100%; /* กำหนดความกว้างเต็ม */
+  max-width: 100%; /* จำกัดความกว้างสูงสุด */
+  height: 400px; /* กำหนดความสูงคงที่ */
+  object-fit: contain; /* ทำให้ภาพครอบคลุมพื้นที่โดยไม่เสียสัดส่วน */
   border-radius: 8px;
-  margin-bottom: 20px;
 }
 
 .project__template__title {
@@ -56,33 +57,157 @@
   color: #0056b3;
 }
 
+.project__template__slider__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.project__template__slider {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+}
+
+.slider__button {
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: transparent;
+  font-size: 1.7rem;
+}
+
+.slider__button--prev,
+.slider__button--next {
+  flex: 0 0 auto;
+}
+
+.slider__button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.project__template__techstack {
+  width: 100%; /* กำหนดความกว้างเต็ม */
+  max-width: 700px; /* จำกัดความกว้างสูงสุด */
+  height: auto; /* ให้ความสูงปรับตามสัดส่วน */
+  margin: 20px auto; /* จัดกึ่งกลางและเพิ่มระยะห่าง */
+  display: block; /* ทำให้ภาพเป็น block-level element */
+  border-radius: 8px; /* เพิ่มความโค้งมนให้กับมุม */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ภาพ */
+}
+
+/* Responsive Design for Mobile Devices */
+/* Responsive Design for Tablets */
+@media (max-width: 1024px) {
+  .project__template {
+    padding: 15px;
+    margin: 15px;
+    max-width: 90%;
+  }
+
+  .project__template__title {
+    font-size: 1.8rem;
+  }
+
+  .project__template__content {
+    font-size: 1.1rem;
+  }
+
+  .project__template__text {
+    font-size: 1rem;
+    margin: 15px 0;
+  }
+
+  .project__template__link {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  .project__template__slider {
+    max-width: 600px;
+  }
+
+  .project__template__techstack {
+    max-width: 600px;
+  }
+}
+
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
-    .project__template {
-      padding: 10px;
-      margin: 10px;
-      max-width: 100%;
-      box-shadow: none;
-    }
-  
-    .project__template__title {
-      font-size: 1.5rem;
-    }
-  
-    .project__template__content {
-      font-size: 1rem;
-    }
-  
-    .project__template__text {
-      font-size: 0.9rem;
-      margin: 10px 0;
-    }
-  
-    .project__template__link {
-      font-size: 0.9rem;
-      margin-top: 10px;
-    }
+  .project__template {
+    padding: 10px;
+    margin: 10px;
+    max-width: 100%;
+    box-shadow: none;
   }
+
+  .project__template__title {
+    font-size: 1.5rem;
+  }
+
+  .project__template__content {
+    font-size: 1rem;
+  }
+
+  .project__template__text {
+    font-size: 0.9rem;
+    margin: 10px 0;
+  }
+
+  .project__template__link {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  .project__template__image {
+    height: 300px; /* ลดความสูงของรูปภาพ */
+  }
+
+  .project__template__slider {
+    max-width: 90%; /* ลดขนาด slider ให้เล็กลง */
+  }
+
+  .slider__button {
+    padding: 6px 10px; /* ลด padding ของปุ่ม */
+    font-size: 0.9rem; /* ลดขนาดตัวอักษรในปุ่ม */
+  }
+
+  .project__template__techstack {
+    max-width: 100%;
+  }
+}
+
+/* Responsive Design for Small Mobile Devices */
+@media (max-width: 480px) {
+  .project__template__title {
+    font-size: 1.2rem;
+  }
+
+  .project__template__content {
+    font-size: 0.9rem;
+  }
+
+  .project__template__text {
+    font-size: 0.8rem;
+  }
+
+  .project__template__link {
+    font-size: 0.8rem;
+  }
+
+  .project__template__image {
+    height: 200px; /* ลดความสูงของรูปภาพ */
+  }
+
+  .slider__button {
+    padding: 8px 12px;
+  }
+}
 
 @keyframes fadeInUp {
   from {

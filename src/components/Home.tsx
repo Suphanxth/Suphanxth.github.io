@@ -15,7 +15,7 @@ function Home() {
   useEffect(() => {
     // เลือก video ตามความกว้างหน้าจอ
     const isMobile = window.innerWidth <= 768;
-    setVideoSrc(isMobile ? '/src/assets/suphanath-mobile.mp4' : '/src/assets/suphanath.mp4');
+    setVideoSrc(isMobile ? '/assets/suphanath-mobile.mp4' : '/assets/suphanath.mp4');
   }, []);
 
   useEffect(() => {

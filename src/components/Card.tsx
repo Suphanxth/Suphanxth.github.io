@@ -8,7 +8,7 @@ function Card() {
       title: 'Easible: Automated Network Device Configuration and Verification Web Application',
       content: 'Thesis Project',
       image: '/assets/easible.png',
-      text: "Thesis Project: lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      text: "Thesis Project: A web application for automate network device configuration and verification.",
       link: '/myproject/easible',
     },
     {

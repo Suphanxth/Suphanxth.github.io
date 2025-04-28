@@ -88,10 +88,11 @@ function Home() {
                 ref={videoRef}
                 muted
                 playsInline
+                autoPlay
                 className="home__video__content"
                 preload="auto"
               >
-                <source src={videoSrc} type="video/mp4" />
+                <source src={videoSrc} type="video/mp4; codecs=avc1.42E01E, mp4a.40.2" />
               </video>
             )}
           </div>

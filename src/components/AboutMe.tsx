@@ -69,7 +69,7 @@ function AboutMe() {
                         <div>Advanced Information Technology PCL.</div>
                         <span>Bangkok</span>
                     </div>
-                    <div style={{ textAlign: 'left', fontSize: '14px' }}>
+                    <div style={{marginTop: '10px', textAlign: 'left', fontSize: '14px' }}>
                         <li>Worked with SD-WAN systems and managed device setups using Dot1x for branch installations.</li>
                         <li>Performed factory resets, switch upgrades, ATP testing, and access point staging</li>
                         <li> Developed an <a href="/myproject/eoxcheck" target="_blank" rel="noopener noreferrer">EoX Check</a> web application (<strong>JavaScript, CSS, Node.js, Express</strong>) to automate manual device EoX status checks via <strong>Cisco APIs</strong></li>
@@ -88,18 +88,16 @@ function AboutMe() {
                 </div>
                 <hr/>
             </div>
-            <div className='soft-interest'>
-                <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+            <div>
+                <div className='soft-interest'>
                     <div>
                         <h2 style={{ fontSize: '32px', textDecoration: 'underline' }}>SOFT SKILLS</h2>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '35px', fontSize: '14px', marginTop: '0' }}>
-                            <ul style={{ padding: 0, margin: 0 }}>
+                        <div className='soft-skill'>
+                            <ul>
                                 <li>Friendliness</li>
                                 <li>Adaptability</li>
                                 <li>Communication</li>
                                 <li>Teamwork</li>
-                            </ul>
-                            <ul style={{ padding: 0, margin: 0 }}>
                                 <li>Respect & Support</li>
                                 <li>Empathetic listening</li>
                                 <li>Problem-solving</li>
@@ -119,6 +117,7 @@ function AboutMe() {
                 <div style={{ textAlign: 'left', fontSize: '14px' }}>
                     <li><strong>Listening to music</strong>(Thai indie, T-Pop, J-Pop)</li>
                     <li><strong>Gaming</strong> (FPS, Turn-based, Action RPG)</li>
+                    <li><strong>Running</strong></li>
                     <li><strong>Building Gunpla</strong> (Gundam plastic models)</li>
                     <li><strong>Reading Manga</strong></li>
                     <li><strong>Watching anime</strong></li>

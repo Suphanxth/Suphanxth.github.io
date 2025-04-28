@@ -1,5 +1,152 @@
+.about-me {
+  padding: 20px;
+}
+
+.about-me__header h2 {
+  font-size: 32px;
+  text-decoration: underline;
+}
+
 .flex-space-between {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.flex-space-between span {
+  font-size: 14px;
+}
+
+.about-me__content {
+  margin-top: 20px;
+}
+
+.soft-interest {
+  display: flex;
+  justify-content: space-around;
+}
+
+.soft-skill {
+  display: flex; 
+  justify-content: space-between; 
+  gap: 35px; 
+  font-size: 14px; 
+  margin-top: 0;
+}
+
+.soft-skill ul {
+  padding: 0; 
+  margin: 0; 
+  list-style-position: inside; 
+  text-align: left; 
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr);
+}
+
+h2 {
+  font-size: 32px;
+  text-decoration: underline;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  font-size: 14px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .about-me__header h2 {
+    font-size: 24px;
+  }
+
+  .about-me__content h2 {
+    font-size: 24px;
+  }
+
+  .flex-space-between {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .flex-space-between span {
+    font-size: 16px;
+  }
+
+  .about-me__content .education,
+  .about-me__content .work-experience,
+  .about-me__content .skills,
+  .about-me__content .soft-interest,
+  .about-me__content .hobby {
+    margin-top: 20px;
+  }
+
+  .soft-interest {
+    display: block;
+  }
+
+  .soft-skill {
+    display: block; /* Remove flex for SOFT SKILLS */
+    gap: 0; /* Reset gap */
+  }
+
+  .soft-skill ul {
+    display: block; /* Change to block for mobile */
+    margin: 0 auto; /* Center the whole list */
+    width: fit-content; /* Adjust the width to fit content */
+  }
+
+  .soft-skill ul li {
+    text-align: left; /* Align text to the left */
+  }
+
+  .soft-interest > div {
+    margin-bottom: 20px;
+  }
+
+  .soft-interest ul {
+    margin-bottom: 10px;
+  }
+
+  .hobby li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me__header h2 {
+    font-size: 20px;
+  }
+
+  .about-me__content h2 {
+    font-size: 20px;
+  }
+
+  .flex-space-between {
+    flex-direction: column;
+  }
+
+  .flex-space-between span {
+    font-size: 14px;
+  }
+
+  .soft-interest {
+    display: block; /* Remove flex for mobile */
+  }
+
+  .soft-skill {
+    display: block; /* Remove flex for SOFT SKILLS */
+    gap: 0; /* Reset gap */
+  }
+
+  .soft-interest ul {
+    font-size: 12px;
+  }
+
+  .hobby li {
+    font-size: 14px;
+  }
 }

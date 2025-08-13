@@ -6,7 +6,7 @@ function NavBar() {
         <div className="navbar">
             <div className="navbar__container">
                 <Link to="/" className="navbar__me">
-                    <img src="/assets/Mypic.PNG" alt="My Picture" className="navbar__avatar" />
+                    {/* <img src="/assets/Mypic.PNG" alt="My Picture" className="navbar__avatar" /> */}
                     <span className="navbar__name">Suphanath Wangtip</span>
                 </Link>
                 <div className="navbar__aboutme">

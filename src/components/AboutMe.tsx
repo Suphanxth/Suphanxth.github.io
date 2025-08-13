@@ -23,7 +23,7 @@ function AboutMe() {
                     </span>
                     <span>
                         <a href="https://www.facebook.com/supanut.wangthip/" target="_blank" rel="noopener noreferrer">
-                            Suphanath Wangtip (Facebook)
+                            Suphanath Wangthip (Facebook)
                         </a>
                     </span>
                 </div>
@@ -85,7 +85,7 @@ function AboutMe() {
                         <span>Bangkok</span>
                     </div>
                     <div style={{marginTop: '10px', textAlign: 'left', fontSize: '14px' }}>
-                        <li>Coming Soon</li>
+                        <li>Coming Soon...</li>
                     </div>
                 </div>
                 <hr/>
@@ -93,8 +93,8 @@ function AboutMe() {
             <div className='skills'>
                 <h2 style={{ fontSize: '32px', textDecoration: 'underline' }}>SKILLS</h2>
                 <div style={{ textAlign: 'left', fontSize: '14px' }}>
-                    <li><strong>Programming Languages</strong>: JavaScript, Node.js, Express.js, Go (currently learning)</li>
-                    <li><strong>Web Development</strong>: HTML, CSS, React.js, Node.js, Express.js, TypeScript, Flask</li>
+                    <li><strong>Programming Languages</strong>: Go, JavaScript, TypeScript, Python</li>
+                    <li><strong>Web Development</strong>: Go Fiber, CSS, React.js, Node.js, Express.js, TypeScript, Flask</li>
                     <li><strong>Database Management</strong>: Postgresql, MySQL</li>
                     <li><strong>Tools</strong>: Linux, Ubuntu, Docker, Git, Ansible</li>
                     <li><strong>Other</strong>: Network</li>

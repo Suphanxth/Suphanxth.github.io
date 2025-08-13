@@ -75,6 +75,19 @@ function AboutMe() {
                         <li> Developed an <a href="/myproject/eoxcheck" target="_blank" rel="noopener noreferrer">EoX Check</a> web application (<strong>JavaScript, CSS, Node.js, Express</strong>) to automate manual device EoX status checks via <strong>Cisco APIs</strong></li>
                     </div>
                 </div>
+                <div>
+                    <div className="flex-space-between" style={{ marginTop: '25px' }}>
+                        <strong>Back-End Developer</strong>
+                        <strong>Jun - Current</strong>
+                    </div>
+                    <div className="flex-space-between" style={{ fontSize: '14px' }}>
+                        <div>TCC Technology</div>
+                        <span>Bangkok</span>
+                    </div>
+                    <div style={{marginTop: '10px', textAlign: 'left', fontSize: '14px' }}>
+                        <li>Coming Soon</li>
+                    </div>
+                </div>
                 <hr/>
             </div>
             <div className='skills'>
